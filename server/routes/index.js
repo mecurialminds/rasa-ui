@@ -153,4 +153,8 @@ router.post('/auth', auth.authenticateUser);
 router.post('/authclient', auth.authenticateClient);
 router.get('/health', health.liveness);
 
+//rating.js
+router.post('/rating',rating.insertBotRating);
+router.get('/rating/:bot_id',rating.getBotRating);
+
 module.exports = router;
